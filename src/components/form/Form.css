@@ -6,45 +6,64 @@
   width: 100%;
   height: 100%;
   padding: 30px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .date-input {
   display: block;
   width: 100%;
+  height: 30px;
   border: 1px solid lightgrey; 
   border-radius: 2px;
-  margin-top: 3px;
+  margin-top: 5px;
+}
+
+.date-input::-webkit-inner-spin-button {
+  display: none;
+  -webkit-appearance: none;
 }
 
 .state-label {
   display: block;
+  margin-top: 20px;
 }
 
-.state-input1-wrapper {
+.mood-input-wrapper {
   display: inline-block;
-  margin-top: 3px;
+  margin-top: 10px;
+  margin-right: 50px;
+  border-style: none;
 }
 
-.state-input2-wrapper {
-  display: inline-block;
+.mood-label {
+  margin-left: 10px;
+}
+
+.message-wrapper {
+  margin-top: 20px;
 }
 
 .message-input {
   display: block;
   width: 100%;
+  height: 30px;
   border: 1px solid lightgrey; 
   border-radius: 2px;
-  margin-top: 3px;
+  margin-top: 5px;
+  padding: 10px;
+  font-size: 12px;
 }
 
 .save-button {
   display: block;
   width: 100%;
+  height: 30px;
   background-color: rgb(97, 165, 228);
   color: white;
   border: 1px solid  rgb(97, 165, 228);
   border-radius: 2px;
   margin-top: 32px;
+  font-size: 14px;
 }
 
 .cancel-button {
@@ -52,4 +71,5 @@
   width: 100%;
   color: gray;
   margin-top: 10px;
+  font-size: 12px;
 }

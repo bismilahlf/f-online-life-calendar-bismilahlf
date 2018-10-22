@@ -62,25 +62,25 @@ class Form extends Component {
           
           <label className="state-label">Estado</label>
           
-          <fieldset className="state-input1-wrapper">
+          <fieldset className="mood-input-wrapper">
             <input 
               id="state1" 
               type="radio" 
               name="state" 
               value=":)" 
               onChange={this.setMood} 
-              className="state-input1"
+              className="mood-input"
             />
             <label 
               htmlFor="state1" 
-              className="state-label1"
+              className="mood-label"
             >
               :)
             </label>
           </fieldset>
           
           <fieldset 
-            className="state-input2-wrapper"
+            className="mood-input-wrapper"
           >
             <input 
               id="state2" 
@@ -88,11 +88,11 @@ class Form extends Component {
               name="state" 
               value=":(" 
               onChange={this.setMood} 
-              className="state-input2"
+              className="mood-input"
             />
             <label 
               htmlFor="state2"
-              className="state-label2"
+              className="mood-label"
             >
               :(
             </label>
@@ -100,11 +100,17 @@ class Form extends Component {
           
            {/* Muestra el input del mensaje si "mood" es ":)"  */}
           {this.state.mood === ':)' && 
-            <div>
-              <label htmlFor="message">Mensaje</label>
+            <div className="message-wrapper">
+              <label 
+                htmlFor="message"
+                className="message-label"
+              >
+                Mensaje
+              </label>
               <input 
                 id="message" 
                 type="text" 
+                placeholder="¿Por qué es un buen día?"
                 onChange={this.setMessage}
                 className="message-input"
               />
