@@ -13,12 +13,14 @@ class App extends Component {
     }
   }
 
+  // Crea el array days si no existe en el local storage
   componentDidMount() {
     if( !localStorage.getItem('days') ) {
       localStorage.setItem('days', '[]');
     }
   }
 
+  // Cambia showForm entre true y false
   togglePopup = () => {
     if(this.state.showForm) {
       this.setState({
@@ -34,6 +36,7 @@ class App extends Component {
   render() {
     return (
       <div>
+        {/* Muestra Form si this.state.showForm es true */}
         {this.state.showForm === true && <Form togglePopup={this.togglePopup} />}
         <button onClick={ this.togglePopup }>+</button>
         <Calendar/>

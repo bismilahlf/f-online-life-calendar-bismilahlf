@@ -31,10 +31,15 @@ class Form extends Component {
   }
 
   saveData = () => {
-    let daysString = localStorage.getItem('days');
-    let daysArray = JSON.parse(daysString);
-    daysArray.push(this.state);
-    localStorage.setItem('days', JSON.stringify(daysArray));
+    let daysString = localStorage.getItem('days'); // Trae "days" del LocalStorage
+    let daysArray = JSON.parse(daysString); // Lo convierte en un array
+    let currentDay = {
+      date: this.state.date,
+      mood: this.state.mood,
+      message: this.state.message
+    };
+    daysArray.push(currentDay); // Mete "currentDay" en el array "days"
+    localStorage.setItem('days', JSON.stringify(daysArray)); // Vuelve a guardar "days" en el LocalStorage
   }
 
   render() {
@@ -49,7 +54,8 @@ class Form extends Component {
           <label htmlFor="state1">:)</label>
           <input id="state2" type="radio" name="state" value=":(" onChange={this.setMood}/>
           <label htmlFor="state2">:(</label>
-            
+
+           {/* Muestra el input del mensaje si "mood" es ":)"  */}
           {this.state.mood === ':)' && 
             <div>
               <label htmlFor="message">Mensaje</label>

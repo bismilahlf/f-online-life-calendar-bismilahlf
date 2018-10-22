@@ -10,6 +10,7 @@ class Calendar extends Component {
     }
   }
 
+  // Trae days del Local Storage, lo convierte en un array y lo guarda en el state
   componentDidMount () {
     let daysString = localStorage.getItem('days');
     let daysArray = JSON.parse(daysString);
@@ -21,6 +22,7 @@ class Calendar extends Component {
   render() {
     return (
       <div>
+        {/* Pinta un div por cada elemento del array */}
         {this.state.days.map((day) => {
           return (
             <div title={day.message}>{day.mood}</div>
