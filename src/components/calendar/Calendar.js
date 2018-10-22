@@ -22,11 +22,21 @@ class Calendar extends Component {
 
   render() {
     return (
-      <div>
+      <div className="smiley-wrapper">
         {/* Pinta un div por cada elemento del array */}
         {this.state.days.map((day, i) => {
           return (
-            <div key={i} title={day.message}>{day.mood}</div>
+            <div
+              key={i} 
+              title={day.message}
+              className={`smiley ${
+                day.mood === ':)' 
+                ? 'good'
+                : 'bad'
+              }`}
+            >
+              {day.mood}
+            </div>
           )
         })}
       </div>

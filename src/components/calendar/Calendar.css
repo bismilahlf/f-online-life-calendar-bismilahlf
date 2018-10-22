@@ -1,0 +1,25 @@
+
+.smiley-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.smiley {
+  width: 70px;
+  height: 70px;
+  border-radius: 50px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+}
+
+.good {
+  background: rgb(255, 230, 0);
+}
+
+.bad {
+  background: rgb(255, 102, 0);
+  color: white;
+}

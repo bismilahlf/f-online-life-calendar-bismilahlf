@@ -38,7 +38,11 @@ class App extends Component {
       <div>
         {/* Muestra Form si this.state.showForm es true */}
         {this.state.showForm === true && <Form togglePopup={this.togglePopup} />}
-        <button onClick={ this.togglePopup }>+</button>
+        <button 
+          onClick={ this.togglePopup } className="form-button"
+        >
+          +
+        </button>
         <Calendar/>
       </div>
     )
