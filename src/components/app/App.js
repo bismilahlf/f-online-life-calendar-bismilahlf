@@ -13,17 +13,25 @@ class App extends Component {
     }
   }
 
-  addDay = (e) => {
-    this.setState({
-      showForm: true
-    })
+  togglePopup = () => {
+    if(this.state.showForm) {
+      this.setState({
+        showForm: false
+      })
+    } else {
+      this.setState({
+        showForm: true
+      })
+    }
   }
+  
+
 
   render() {
     return (
       <div>
-        {this.state.showForm && <Form/>}
-        <button onClick={ this.addDay }>+</button>
+        {this.state.showForm === true && <Form togglePopup={this.togglePopup} />}
+        <button onClick={ this.togglePopup }>+</button>
         <Calendar/>
       </div>
     )

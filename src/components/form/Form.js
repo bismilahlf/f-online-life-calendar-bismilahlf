@@ -17,8 +17,9 @@ class Form extends Component {
           <input id="message" type="text"/>
 
           <input type="submit" value="GUARDAR"/>
-          
         </form>
+
+        <button onClick={this.props.togglePopup}>Cancelar</button>
       </div>
     )
   }
