@@ -23,7 +23,7 @@ class Calendar extends Component {
       <div>
         {this.state.days.map((day) => {
           return (
-            <div>{day.mood}</div>
+            <div title={day.message}>{day.mood}</div>
           )
         })}
       </div>
