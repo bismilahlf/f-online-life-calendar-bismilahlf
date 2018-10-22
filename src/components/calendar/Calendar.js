@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import './Calendar.css'
 
 class Calendar extends Component {
 
@@ -23,9 +24,9 @@ class Calendar extends Component {
     return (
       <div>
         {/* Pinta un div por cada elemento del array */}
-        {this.state.days.map((day) => {
+        {this.state.days.map((day, i) => {
           return (
-            <div title={day.message}>{day.mood}</div>
+            <div key={i} title={day.message}>{day.mood}</div>
           )
         })}
       </div>
