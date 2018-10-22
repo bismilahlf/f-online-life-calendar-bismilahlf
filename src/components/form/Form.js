@@ -45,12 +45,12 @@ class Form extends Component {
           <input id="date" type="date" onChange={this.setDate}/>
           
           <label>Estado</label>
-          <input id="state1" type="radio" name="state" value="goodday" onChange={this.setMood}/>
+          <input id="state1" type="radio" name="state" value=":)" onChange={this.setMood}/>
           <label htmlFor="state1">:)</label>
-          <input id="state2" type="radio" name="state" value="badday" onChange={this.setMood}/>
+          <input id="state2" type="radio" name="state" value=":(" onChange={this.setMood}/>
           <label htmlFor="state2">:(</label>
             
-          {this.state.mood === 'goodday' && 
+          {this.state.mood === ':)' && 
             <div>
               <label htmlFor="message">Mensaje</label>
               <input id="message" type="text" onChange={this.setMessage}/>
