@@ -13,6 +13,12 @@ class App extends Component {
     }
   }
 
+  componentDidMount() {
+    if( !localStorage.getItem('days') ) {
+      localStorage.setItem('days', '[]');
+    }
+  }
+
   togglePopup = () => {
     if(this.state.showForm) {
       this.setState({
@@ -25,8 +31,6 @@ class App extends Component {
     }
   }
   
-
-
   render() {
     return (
       <div>
