@@ -4,11 +4,15 @@
   box-sizing: border-box;
 }
 
-body {
+.main-wrapper {
+  background: white;
   width: 100vw;
   height: 100vh;
   padding: 30px;
   max-width: 320px;
+  border: 1px solid grey;
+  margin: 0 auto;
+  position: relative;
 }
 
 .form-button {
