@@ -2,21 +2,26 @@
 .smiley-wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 20px;
+  grid-gap: 15px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .smiley {
-  width: 70px;
-  height: 70px;
+  width: 75px;
+  height: 75px;
   border-radius: 50px;
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  font-size: 32px;
+  font-size: 36px;
+  padding-bottom: 6px;
+  padding-right: 3px;
+  font-weight: 600;
 }
 
 .good {
   background: rgb(255, 230, 0);
+  color: rgb(66, 66, 66);
 }
 
 .bad {
